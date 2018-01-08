@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  RBSOdometer
+//  RBSOdometerDemo
 //
-//  Created by Snow.y.wu on 1/3/18.
+//  Created by Snow.y.wu on 1/8/18.
 //  Copyright © 2018 rbbtsn0w. All rights reserved.
 //
 

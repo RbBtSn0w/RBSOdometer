@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B1475E992003299500FEC068 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B1475E982003299500FEC068 /* AppDelegate.m */; };
+		B1475E9C2003299500FEC068 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1475E9B2003299500FEC068 /* ViewController.m */; };
+		B1475E9F2003299500FEC068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1475E9D2003299500FEC068 /* Main.storyboard */; };
+		B1475EA12003299500FEC068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1475EA02003299500FEC068 /* Assets.xcassets */; };
+		B1475EA42003299500FEC068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1475EA22003299500FEC068 /* LaunchScreen.storyboard */; };
+		B1475EA72003299500FEC068 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B1475EA62003299500FEC068 /* main.m */; };
+		B1475EB12003299500FEC068 /* RBSOdometerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1475EB02003299500FEC068 /* RBSOdometerDemoTests.m */; };
+		B1475EBC2003299500FEC068 /* RBSOdometerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B1475EBB2003299500FEC068 /* RBSOdometerDemoUITests.m */; };
+		B1475ED1200329B200FEC068 /* RBSOdometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1475ECF200329B200FEC068 /* RBSOdometerView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1475EAD2003299500FEC068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1475E8C2003299500FEC068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1475E932003299500FEC068;
+			remoteInfo = RBSOdometerDemo;
+		};
+		B1475EB82003299500FEC068 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B1475E8C2003299500FEC068 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1475E932003299500FEC068;
+			remoteInfo = RBSOdometerDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B1475E942003299500FEC068 /* RBSOdometerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RBSOdometerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1475E972003299500FEC068 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B1475E982003299500FEC068 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B1475E9A2003299500FEC068 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B1475E9B2003299500FEC068 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B1475E9E2003299500FEC068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B1475EA02003299500FEC068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1475EA32003299500FEC068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B1475EA52003299500FEC068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1475EA62003299500FEC068 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B1475EAC2003299500FEC068 /* RBSOdometerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBSOdometerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1475EB02003299500FEC068 /* RBSOdometerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBSOdometerDemoTests.m; sourceTree = "<group>"; };
+		B1475EB22003299500FEC068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1475EB72003299500FEC068 /* RBSOdometerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RBSOdometerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1475EBB2003299500FEC068 /* RBSOdometerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBSOdometerDemoUITests.m; sourceTree = "<group>"; };
+		B1475EBD2003299500FEC068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1475ECE200329B200FEC068 /* RBSOdometerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBSOdometerView.h; sourceTree = "<group>"; };
+		B1475ECF200329B200FEC068 /* RBSOdometerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBSOdometerView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B1475E912003299500FEC068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1475EA92003299500FEC068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1475EB42003299500FEC068 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B1475E8B2003299500FEC068 = {
+			isa = PBXGroup;
+			children = (
+				B1475E962003299500FEC068 /* RBSOdometerDemo */,
+				B1475EAF2003299500FEC068 /* RBSOdometerDemoTests */,
+				B1475EBA2003299500FEC068 /* RBSOdometerDemoUITests */,
+				B1475E952003299500FEC068 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B1475E952003299500FEC068 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B1475E942003299500FEC068 /* RBSOdometerDemo.app */,
+				B1475EAC2003299500FEC068 /* RBSOdometerDemoTests.xctest */,
+				B1475EB72003299500FEC068 /* RBSOdometerDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B1475E962003299500FEC068 /* RBSOdometerDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B1475ECD200329B200FEC068 /* RBSOdometer */,
+				B1475E972003299500FEC068 /* AppDelegate.h */,
+				B1475E982003299500FEC068 /* AppDelegate.m */,
+				B1475E9A2003299500FEC068 /* ViewController.h */,
+				B1475E9B2003299500FEC068 /* ViewController.m */,
+				B1475E9D2003299500FEC068 /* Main.storyboard */,
+				B1475EA02003299500FEC068 /* Assets.xcassets */,
+				B1475EA22003299500FEC068 /* LaunchScreen.storyboard */,
+				B1475EA52003299500FEC068 /* Info.plist */,
+				B1475EA62003299500FEC068 /* main.m */,
+			);
+			path = RBSOdometerDemo;
+			sourceTree = "<group>";
+		};
+		B1475EAF2003299500FEC068 /* RBSOdometerDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B1475EB02003299500FEC068 /* RBSOdometerDemoTests.m */,
+				B1475EB22003299500FEC068 /* Info.plist */,
+			);
+			path = RBSOdometerDemoTests;
+			sourceTree = "<group>";
+		};
+		B1475EBA2003299500FEC068 /* RBSOdometerDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B1475EBB2003299500FEC068 /* RBSOdometerDemoUITests.m */,
+				B1475EBD2003299500FEC068 /* Info.plist */,
+			);
+			path = RBSOdometerDemoUITests;
+			sourceTree = "<group>";
+		};
+		B1475ECD200329B200FEC068 /* RBSOdometer */ = {
+			isa = PBXGroup;
+			children = (
+				B1475ECE200329B200FEC068 /* RBSOdometerView.h */,
+				B1475ECF200329B200FEC068 /* RBSOdometerView.m */,
+			);
+			name = RBSOdometer;
+			path = ../../RBSOdometer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B1475E932003299500FEC068 /* RBSOdometerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1475EC02003299500FEC068 /* Build configuration list for PBXNativeTarget "RBSOdometerDemo" */;
+			buildPhases = (
+				B1475E902003299500FEC068 /* Sources */,
+				B1475E912003299500FEC068 /* Frameworks */,
+				B1475E922003299500FEC068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RBSOdometerDemo;
+			productName = RBSOdometerDemo;
+			productReference = B1475E942003299500FEC068 /* RBSOdometerDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B1475EAB2003299500FEC068 /* RBSOdometerDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1475EC32003299500FEC068 /* Build configuration list for PBXNativeTarget "RBSOdometerDemoTests" */;
+			buildPhases = (
+				B1475EA82003299500FEC068 /* Sources */,
+				B1475EA92003299500FEC068 /* Frameworks */,
+				B1475EAA2003299500FEC068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1475EAE2003299500FEC068 /* PBXTargetDependency */,
+			);
+			name = RBSOdometerDemoTests;
+			productName = RBSOdometerDemoTests;
+			productReference = B1475EAC2003299500FEC068 /* RBSOdometerDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B1475EB62003299500FEC068 /* RBSOdometerDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1475EC62003299500FEC068 /* Build configuration list for PBXNativeTarget "RBSOdometerDemoUITests" */;
+			buildPhases = (
+				B1475EB32003299500FEC068 /* Sources */,
+				B1475EB42003299500FEC068 /* Frameworks */,
+				B1475EB52003299500FEC068 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B1475EB92003299500FEC068 /* PBXTargetDependency */,
+			);
+			name = RBSOdometerDemoUITests;
+			productName = RBSOdometerDemoUITests;
+			productReference = B1475EB72003299500FEC068 /* RBSOdometerDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B1475E8C2003299500FEC068 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = rbbtsn0w;
+				TargetAttributes = {
+					B1475E932003299500FEC068 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B1475EAB2003299500FEC068 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B1475E932003299500FEC068;
+					};
+					B1475EB62003299500FEC068 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B1475E932003299500FEC068;
+					};
+				};
+			};
+			buildConfigurationList = B1475E8F2003299500FEC068 /* Build configuration list for PBXProject "RBSOdometerDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B1475E8B2003299500FEC068;
+			productRefGroup = B1475E952003299500FEC068 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B1475E932003299500FEC068 /* RBSOdometerDemo */,
+				B1475EAB2003299500FEC068 /* RBSOdometerDemoTests */,
+				B1475EB62003299500FEC068 /* RBSOdometerDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B1475E922003299500FEC068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1475EA42003299500FEC068 /* LaunchScreen.storyboard in Resources */,
+				B1475EA12003299500FEC068 /* Assets.xcassets in Resources */,
+				B1475E9F2003299500FEC068 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1475EAA2003299500FEC068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1475EB52003299500FEC068 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B1475E902003299500FEC068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1475E9C2003299500FEC068 /* ViewController.m in Sources */,
+				B1475EA72003299500FEC068 /* main.m in Sources */,
+				B1475ED1200329B200FEC068 /* RBSOdometerView.m in Sources */,
+				B1475E992003299500FEC068 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1475EA82003299500FEC068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1475EB12003299500FEC068 /* RBSOdometerDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1475EB32003299500FEC068 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1475EBC2003299500FEC068 /* RBSOdometerDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B1475EAE2003299500FEC068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1475E932003299500FEC068 /* RBSOdometerDemo */;
+			targetProxy = B1475EAD2003299500FEC068 /* PBXContainerItemProxy */;
+		};
+		B1475EB92003299500FEC068 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B1475E932003299500FEC068 /* RBSOdometerDemo */;
+			targetProxy = B1475EB82003299500FEC068 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B1475E9D2003299500FEC068 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1475E9E2003299500FEC068 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B1475EA22003299500FEC068 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B1475EA32003299500FEC068 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B1475EBE2003299500FEC068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B1475EBF2003299500FEC068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1475EC12003299500FEC068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RBSOdometerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbbtsn0w.RBSOdometerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B1475EC22003299500FEC068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RBSOdometerDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbbtsn0w.RBSOdometerDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B1475EC42003299500FEC068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RBSOdometerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbbtsn0w.RBSOdometerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RBSOdometerDemo.app/RBSOdometerDemo";
+			};
+			name = Debug;
+		};
+		B1475EC52003299500FEC068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RBSOdometerDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbbtsn0w.RBSOdometerDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RBSOdometerDemo.app/RBSOdometerDemo";
+			};
+			name = Release;
+		};
+		B1475EC72003299500FEC068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RBSOdometerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbbtsn0w.RBSOdometerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RBSOdometerDemo;
+			};
+			name = Debug;
+		};
+		B1475EC82003299500FEC068 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RBSOdometerDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rbbtsn0w.RBSOdometerDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RBSOdometerDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B1475E8F2003299500FEC068 /* Build configuration list for PBXProject "RBSOdometerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1475EBE2003299500FEC068 /* Debug */,
+				B1475EBF2003299500FEC068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1475EC02003299500FEC068 /* Build configuration list for PBXNativeTarget "RBSOdometerDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1475EC12003299500FEC068 /* Debug */,
+				B1475EC22003299500FEC068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1475EC32003299500FEC068 /* Build configuration list for PBXNativeTarget "RBSOdometerDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1475EC42003299500FEC068 /* Debug */,
+				B1475EC52003299500FEC068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1475EC62003299500FEC068 /* Build configuration list for PBXNativeTarget "RBSOdometerDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1475EC72003299500FEC068 /* Debug */,
+				B1475EC82003299500FEC068 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B1475E8C2003299500FEC068 /* Project object */;
+}
