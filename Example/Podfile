@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RBSOdometer_Example' do
+  pod 'RBSOdometer', :path => '../'
+
+  target 'RBSOdometer_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

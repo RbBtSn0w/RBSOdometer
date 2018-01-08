@@ -1,0 +1,22 @@
+{
+  "name": "RBSOdometer",
+  "version": "0.1.0",
+  "summary": "RBSOdometer is a ObjC library for smoothly transitioning numbers..",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/RbBtSn0w/RBSOdometer",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "RbBtSn0w": "hamiltonsnow@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/RbBtSn0w/RBSOdometer.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source_files": "RBSOdometer/Classes/**/*"
+}
