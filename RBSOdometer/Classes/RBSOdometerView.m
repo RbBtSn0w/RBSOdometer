@@ -158,14 +158,14 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
         if (isNumber == NO) {
             return;
         }
-        NSInteger number =  isNumber ? [digitsString integerValue] : 10;//0～9
+        NSUInteger number =  isNumber ? (NSUInteger)[digitsString integerValue] : 10;//0～9
         
         NSInteger maxDensity = isNumber ? self.density + 1 : self.density;
         for(NSUInteger i = 0; i < maxDensity; ++i){
             if (isNumber) {
-                [textForScroll addObject:[NSString stringWithFormat:@"%lu", (number + i) % 10]];
+                [textForScroll addObject:[NSString stringWithFormat:@"%tu", (NSUInteger)((number + i) % 10)]];
             }else {
-                [textForScroll addObject:[NSString stringWithFormat:@"%lu", i]];
+                [textForScroll addObject:[NSString stringWithFormat:@"%tu", i]];
             }
         }
     };
@@ -334,4 +334,3 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     return paddedNumber;
 }
 @end
-

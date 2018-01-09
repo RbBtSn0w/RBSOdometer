@@ -17,26 +17,29 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+#   s.description      = <<-DESC
+# TODO: Add long description of the pod here.
+#                        DESC
 
   s.homepage         = 'https://github.com/RbBtSn0w/RBSOdometer'
-  # s.screenshots     = 'https://github.com/RbBtSn0w/RBSOdometer/blob/master/RBSOdometerDemo.gif'
+  s.screenshots      = 'https://github.com/RbBtSn0w/RBSOdometer/blob/master/RBSOdometerDemo.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'RbBtSn0w' => 'hamiltonsnow@gmail.com' }
-  s.source           = { :git => 'https://github.com/RbBtSn0w/RBSOdometer.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/RbBtSn0w'
+  s.source           = { :git => 'https://github.com/RbBtSn0w/RBSOdometer.git', :tag => s.version }
+  s.requires_arc     = true
+  s.social_media_url = 'https://twitter.com/RbBtSn0w'
 
   s.ios.deployment_target = '7.0'
+  #s.watchos.deployment_target = '2.0'
+  #s.tvos.deployment_target = '9.0'
 
-  s.source_files = 'RBSOdometer/Classes/**/*'
+  s.source_files = 'RBSOdometer/Classes/*.{h,m}'
   
   # s.resource_bundles = {
   #   'RBSOdometer' => ['RBSOdometer/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  #s.public_header_files = 'Pod/Classes/*.h'
+  s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
