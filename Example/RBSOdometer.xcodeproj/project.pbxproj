@@ -305,10 +305,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RBSOdometer_Example/Pods-RBSOdometer_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RBSOdometer/RBSOdometer.framework",
+				"${BUILT_PRODUCTS_DIR}/RBSReuseQueue/RBSReuseQueue.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBSOdometer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RBSReuseQueue.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

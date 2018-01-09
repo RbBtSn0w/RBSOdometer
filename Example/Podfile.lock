@@ -1,5 +1,7 @@
 PODS:
-  - RBSOdometer (0.1.0)
+  - RBSOdometer (0.1.1):
+    - RBSReuseQueue (~> 0.1.0)
+  - RBSReuseQueue (0.1.0)
 
 DEPENDENCIES:
   - RBSOdometer (from `../`)
@@ -9,7 +11,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  RBSOdometer: 3377f8673b137a7fd2b76e17ab57bcc9a8136a35
+  RBSOdometer: e4316ff6cc6f0859f5d40c7a864a1758c98618ca
+  RBSReuseQueue: 7272b27c8349c9eea5302c1166c12cba0968b152
 
 PODFILE CHECKSUM: c8c0cd0645eab7d6cebf696bafff03fcdcccf0ec
 

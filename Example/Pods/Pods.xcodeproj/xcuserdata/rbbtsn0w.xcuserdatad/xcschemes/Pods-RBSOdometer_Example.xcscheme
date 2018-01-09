@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7AE2B0798DD21FA35ACE87D09AE9A299"
+               BlueprintIdentifier = "92E54163F43F27474020C61C710872FC"
                BuildableName = "Pods_RBSOdometer_Example.framework"
                BlueprintName = "Pods-RBSOdometer_Example"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7AE2B0798DD21FA35ACE87D09AE9A299"
+            BlueprintIdentifier = "92E54163F43F27474020C61C710872FC"
             BuildableName = "Pods_RBSOdometer_Example.framework"
             BlueprintName = "Pods-RBSOdometer_Example"
             ReferencedContainer = "container:Pods.xcodeproj">

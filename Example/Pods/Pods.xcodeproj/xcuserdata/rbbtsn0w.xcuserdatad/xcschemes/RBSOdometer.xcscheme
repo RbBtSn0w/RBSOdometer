@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'D60E6AD6040D9D31F2E6A8B7D9B0AF7B'
+               BlueprintIdentifier = '250DC430D833BAA34DE8A9F26767EF84'
                BlueprintName = 'RBSOdometer'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'RBSOdometer.framework'>

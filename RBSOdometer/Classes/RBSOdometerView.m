@@ -22,20 +22,43 @@
 // THE SOFTWARE.
 
 #import "RBSOdometerView.h"
+#import <RBSReuseQueue/RBSReuseQueue.h>
+#import <RBSReuseQueue/RBSReusableDelegate.h>
+
+static NSString *const kRBSReuseTextLayerIdentifier = @"RBSReuseTextLayerIdentifier";
+
+@interface RBSReuseTextLayer : CATextLayer <RBSReusableDelegate>
+
+@end
+
+@implementation RBSReuseTextLayer
+@synthesize reuseIdentifier = _reuseIdentifier;
+
+- (instancetype)initWithReuseIdentifier:(NSString *)reuseIdentifier {
+    self = [self init];
+    if (self) {
+        self.reuseIdentifier = reuseIdentifier;
+    }
+    return self;
+}
+@end
+
+#pragma mark    - RBSOdometerView
 
 static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
 
 @implementation RBSOdometerView
 {
-    NSMutableArray *_numbersText;
-    NSMutableArray *_scrollLayers;
-    NSMutableArray *_scrollLabels;
+    NSMutableArray<NSString*> *_numbersText;
+    NSMutableArray<CAScrollLayer*> *_scrollLayers;
+    NSMutableArray<RBSReuseTextLayer*> *_scrollLabels;
     NSCache *_fontSizeCache;
     NSDictionary<NSAttributedStringKey,id> *_attributes;
     NSString *_value;
     CGFloat _mainScreenScale;
     NSUInteger _lastNumber;
     NSInteger _animates;
+    RBSReuseQueue *_reuseQueue;
 }
 
 - (void)setFont:(UIFont *)font {
@@ -77,6 +100,8 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     _mainScreenScale = [UIScreen mainScreen].scale;
     _lastNumber = 0;
     _animates = 0;
+    _reuseQueue = [[RBSReuseQueue alloc] init];
+    [_reuseQueue registerClass:[RBSReuseTextLayer class] withReuseIdentifier:kRBSReuseTextLayerIdentifier];
 }
 
 - (void)setupNumber:(NSUInteger)number {
@@ -117,7 +142,11 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     
     [_numbersText removeAllObjects];
     [_scrollLayers removeAllObjects];
-    [_scrollLabels removeAllObjects];
+    for (NSUInteger i = 0; i < _scrollLabels.count; i++) {
+        RBSReuseTextLayer *textLayer = _scrollLabels[i];
+        [_scrollLabels removeObject:textLayer];
+        [_reuseQueue enqueueReusableObject:textLayer];
+    }
     
     NSString *endingNumberString = [self formatterNumberString:self.number];
     NSString *startNumberString = [self formatterNumberString:_lastNumber];
@@ -209,7 +238,7 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     CGFloat offSetY = 0;
     for(NSString *text in textForScroll){
         CGRect frame = CGRectMake(0, offSetY, CGRectGetWidth(scrollLayer.frame), CGRectGetHeight(scrollLayer.frame));
-        CATextLayer *layer = [self createTextLayer:text];
+        RBSReuseTextLayer *layer = [self reuseTextLayer:text];
         layer.contentsScale = _mainScreenScale;
         layer.frame = frame;
         [scrollLayer addSublayer:layer];
@@ -246,8 +275,8 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     return result;
 }
 
-- (CATextLayer *)createTextLayer:(NSString *)text {
-    CATextLayer *textlayer = [[CATextLayer alloc] init];
+- (RBSReuseTextLayer *)reuseTextLayer:(NSString *)text {
+    RBSReuseTextLayer *textlayer = (RBSReuseTextLayer*)[_reuseQueue dequeueReusableObjectWithIdentifier:kRBSReuseTextLayerIdentifier];
     textlayer.foregroundColor = self.textColor.CGColor;
     
     CGFontRef fontRef = CGFontCreateWithFontName((__bridge CFStringRef)self.font.fontName);

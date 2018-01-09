@@ -7,79 +7,105 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01FC7A35BF4D3B4818BAC1B6A92F1A71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0FF119A37BD9D74DC2E6ACFB45AD8460 /* Pods-RBSOdometer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F2D1E40C3314F5C5627E58862C02B5 /* Pods-RBSOdometer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01FC7A35BF4D3B4818BAC1B6A92F1A71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DB4212249AA7354010AB3A613C24D9 /* Foundation.framework */; };
+		12C6537256B973F2F69A04D39B7CBDA7 /* Pods-RBSOdometer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01018FD764ACDDC37A7FDFBC36AF049D /* Pods-RBSOdometer_Example-dummy.m */; };
 		1B792A62A9EFBF87E8668533E6393367 /* Pods-RBSOdometer_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C86BE71D2EA7AD49E1117873828251FC /* Pods-RBSOdometer_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		22A249D395372829CE7DE8903071B704 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7BC221682E51C1C312D3BC49C0C1583D /* RBSOdometerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 149046BB0AE92E70782CA58BCE841E73 /* RBSOdometerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28D5B6D1539718F340E978724C4F1686 /* RBSReuseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B790BDC1B9037103FF0EE097AC3DEF2C /* RBSReuseQueue.m */; };
+		328F146262A0C9264E536629FD475193 /* RBSOdometer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B30441E8D5A9593EC4CEEA8EBB77A1AD /* RBSOdometer-dummy.m */; };
+		38EF3FB6327DFB25C887C7563E3C64B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0217D99058421146CCE3B0C2AFE2988E /* UIKit.framework */; };
+		3A5D2CCAC02F13A28DAFEEA30EF665B0 /* Pods-RBSOdometer_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F2D1E40C3314F5C5627E58862C02B5 /* Pods-RBSOdometer_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C84EAB91AA195D34A4248A1383BD73B /* RBSReuseQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041B23C97132DA96B8701B8CFA007DFB /* RBSReuseQueue.framework */; };
+		63735284B7F0BD1E889B80EAF7822DBA /* RBSOdometer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6131B201F1AEB3BD48770A2E509EAD3D /* RBSOdometer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		698458E192829B3AEA191E7FF841ABBE /* RBSReuseQueue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 923A328B73264EB3306F39C08E2ADD08 /* RBSReuseQueue-dummy.m */; };
+		86EB3D82A3672A947ACCAAD69245367B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DB4212249AA7354010AB3A613C24D9 /* Foundation.framework */; };
+		93BA1306E5B3BEF8C69F609E6B44584F /* RBSReuseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 51BF960A91804E6BD9664A4223955719 /* RBSReuseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		969916E95110FD6C3978801AFE5B56A8 /* Pods-RBSOdometer_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E3C3F3A2ADA74705A4A50B4CAF7DB3 /* Pods-RBSOdometer_Tests-dummy.m */; };
-		9A636DE6F196AE501984BAE3D50B53E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		ADAB26D00A8B34CA7B2D90860D5F462E /* RBSOdometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F29B7D76D7CD78BFB4277253F3CE /* RBSOdometerView.m */; };
-		BA55B47D5BE5D99F4EC116814318B320 /* RBSOdometer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B30441E8D5A9593EC4CEEA8EBB77A1AD /* RBSOdometer-dummy.m */; };
-		E30561B63063ECA76D6301237B0AC0A0 /* Pods-RBSOdometer_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01018FD764ACDDC37A7FDFBC36AF049D /* Pods-RBSOdometer_Example-dummy.m */; };
-		E5188A4D8826D96CA7776C98CB502C2F /* RBSOdometer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6131B201F1AEB3BD48770A2E509EAD3D /* RBSOdometer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A98144519CF275E93C1585FB05CED137 /* RBSOdometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5E5F29B7D76D7CD78BFB4277253F3CE /* RBSOdometerView.m */; };
+		A9AC6308DA23D546E7CB33EE4BC96D38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DB4212249AA7354010AB3A613C24D9 /* Foundation.framework */; };
+		B53A8C99968CAE48A5B76F0D9695FC1D /* RBSReusableDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF058E445EE72BD178B51AB52B202286 /* RBSReusableDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1E3ECDC91190D75B3BEDE85AD82C776 /* RBSReuseQueue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 482011CA9345179205C537C581C03C34 /* RBSReuseQueue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D49149793F80B4E7E0C2EC7D35AE930E /* RBSOdometerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 149046BB0AE92E70782CA58BCE841E73 /* RBSOdometerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DB05964A2402E48E2B26E0B3BF565095 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6DB4212249AA7354010AB3A613C24D9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A406E286CCFA373B22A6CFE4433220A /* PBXContainerItemProxy */ = {
+		66ECBA775255015CF125245508D47A27 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D60E6AD6040D9D31F2E6A8B7D9B0AF7B;
+			remoteGlobalIDString = A46A9C671B39A14436BC2F007E33AB9F;
+			remoteInfo = RBSReuseQueue;
+		};
+		B9ECD1F714B59AAF20C1E5F26577C8F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 250DC430D833BAA34DE8A9F26767EF84;
 			remoteInfo = RBSOdometer;
+		};
+		FF5CB14C4A31D988D2E4C66F058FF6BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A46A9C671B39A14436BC2F007E33AB9F;
+			remoteInfo = RBSReuseQueue;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01018FD764ACDDC37A7FDFBC36AF049D /* Pods-RBSOdometer_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RBSOdometer_Example-dummy.m"; sourceTree = "<group>"; };
-		0DBAD2732EA39A1E387906EF444B5214 /* Pods_RBSOdometer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RBSOdometer_Example.framework; path = "Pods-RBSOdometer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0217D99058421146CCE3B0C2AFE2988E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		028B9E2FC2D5CECBAE0172218810D70D /* RBSReuseQueue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBSReuseQueue-prefix.pch"; sourceTree = "<group>"; };
+		041B23C97132DA96B8701B8CFA007DFB /* RBSReuseQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RBSReuseQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E6BEB5ED59573C2A943B00405C4A6CE /* RBSReuseQueue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RBSReuseQueue.xcconfig; sourceTree = "<group>"; };
 		1042C2F6DC44B9291EC75478D68CCEDE /* Pods-RBSOdometer_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSOdometer_Example-resources.sh"; sourceTree = "<group>"; };
 		149046BB0AE92E70782CA58BCE841E73 /* RBSOdometerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBSOdometerView.h; path = RBSOdometer/Classes/RBSOdometerView.h; sourceTree = "<group>"; };
 		1738EC4C20F78A6111E29670BC86FA80 /* Pods-RBSOdometer_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSOdometer_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		1EBFB70583C394509B51E3AE02D25B1F /* Pods-RBSOdometer_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSOdometer_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2809335BD5707B34C3860C63A8B32750 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		429F44EE6CC9AB0674450DA5C5DE5A21 /* Pods-RBSOdometer_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RBSOdometer_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		482011CA9345179205C537C581C03C34 /* RBSReuseQueue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBSReuseQueue-umbrella.h"; sourceTree = "<group>"; };
+		4C0E8E619337BCFEA5D48AA215BA11BF /* RBSReuseQueue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RBSReuseQueue.modulemap; sourceTree = "<group>"; };
+		51BF960A91804E6BD9664A4223955719 /* RBSReuseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBSReuseQueue.h; path = RBSReuseQueue/Classes/RBSReuseQueue.h; sourceTree = "<group>"; };
 		5553A7510211D78857C6B0662B1D33CC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A008314FC3A57C995CA5F4D624E3A4F /* Pods-RBSOdometer_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RBSOdometer_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6131B201F1AEB3BD48770A2E509EAD3D /* RBSOdometer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBSOdometer-umbrella.h"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6CEEDC6D564C38F1A54D7A11EAADF2F6 /* RBSOdometer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RBSOdometer-prefix.pch"; sourceTree = "<group>"; };
 		70A35CAE653E46148A049D2031E9826E /* RBSOdometer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = RBSOdometer.modulemap; sourceTree = "<group>"; };
 		748540DF13DF696555F429D17105FBF8 /* Pods-RBSOdometer_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSOdometer_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		74E45152FF621C80A24C9D7CC11206A9 /* RBSOdometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RBSOdometer.framework; path = RBSOdometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CDED3659C5FC6B8E0DFB48807432732 /* Pods-RBSOdometer_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RBSOdometer_Tests.modulemap"; sourceTree = "<group>"; };
+		923A328B73264EB3306F39C08E2ADD08 /* RBSReuseQueue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RBSReuseQueue-dummy.m"; sourceTree = "<group>"; };
 		92F2D1E40C3314F5C5627E58862C02B5 /* Pods-RBSOdometer_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RBSOdometer_Example-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98E3C3F3A2ADA74705A4A50B4CAF7DB3 /* Pods-RBSOdometer_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RBSOdometer_Tests-dummy.m"; sourceTree = "<group>"; };
 		A89DE46B6E37C956A8C88B590113C598 /* Pods-RBSOdometer_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RBSOdometer_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AA0929EADA025728A703149C25EEB18A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF058E445EE72BD178B51AB52B202286 /* RBSReusableDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RBSReusableDelegate.h; path = RBSReuseQueue/Classes/RBSReusableDelegate.h; sourceTree = "<group>"; };
 		B30441E8D5A9593EC4CEEA8EBB77A1AD /* RBSOdometer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RBSOdometer-dummy.m"; sourceTree = "<group>"; };
 		B5E5F29B7D76D7CD78BFB4277253F3CE /* RBSOdometerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBSOdometerView.m; path = RBSOdometer/Classes/RBSOdometerView.m; sourceTree = "<group>"; };
-		BE4E3B3F9F35F05DE0A1F62449483817 /* RBSOdometer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RBSOdometer.framework; path = RBSOdometer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B790BDC1B9037103FF0EE097AC3DEF2C /* RBSReuseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RBSReuseQueue.m; path = RBSReuseQueue/Classes/RBSReuseQueue.m; sourceTree = "<group>"; };
 		C0800C48934B8184A58C4E87BCAF4B56 /* Pods-RBSOdometer_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSOdometer_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C741F5359DE17A0CDCD7DB9A9FF97CD4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86BE71D2EA7AD49E1117873828251FC /* Pods-RBSOdometer_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RBSOdometer_Tests-umbrella.h"; sourceTree = "<group>"; };
 		C87E3BF6AA4B7C2C67B88AC881598CCB /* RBSOdometer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RBSOdometer.xcconfig; sourceTree = "<group>"; };
+		CDA40B7DBCA59E75B606C6FAAA393395 /* Pods_RBSOdometer_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RBSOdometer_Example.framework; path = "Pods-RBSOdometer_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61B47CA3543BA198C601777A359F6E5 /* Pods-RBSOdometer_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RBSOdometer_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D7C85344F82DF69CD988B5290227604E /* Pods_RBSOdometer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RBSOdometer_Tests.framework; path = "Pods-RBSOdometer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E9B81E03BF336903A9790652B33032 /* Pods-RBSOdometer_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSOdometer_Example-frameworks.sh"; sourceTree = "<group>"; };
 		DB0F596CFA5CF9A22B3DBB50E4E305ED /* Pods-RBSOdometer_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RBSOdometer_Tests-resources.sh"; sourceTree = "<group>"; };
+		DCC86AE2DE020BCAC75CDB29C68C4ABE /* RBSReuseQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RBSReuseQueue.framework; path = RBSReuseQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF8F660A4B9DDC0219D7C36E68441D44 /* Pods_RBSOdometer_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RBSOdometer_Tests.framework; path = "Pods-RBSOdometer_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1FFB6ACFCC66CD94B88D7AD761E521B /* Pods-RBSOdometer_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-RBSOdometer_Example.modulemap"; sourceTree = "<group>"; };
+		F6DB4212249AA7354010AB3A613C24D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FCA64ACFFE063073E12A3762C658AA92 /* Pods-RBSOdometer_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RBSOdometer_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		15D98A6A45A5939D2436CA7A14BC6A48 /* Frameworks */ = {
+		0617383D9F21C52EA6C4A86F80731A39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22A249D395372829CE7DE8903071B704 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53E3874BFD8BD6120D426BA32DAA12B9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9A636DE6F196AE501984BAE3D50B53E1 /* Foundation.framework in Frameworks */,
+				A9AC6308DA23D546E7CB33EE4BC96D38 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,17 +117,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE9416E311C9F2A2DE02C0519D664CB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EB3D82A3672A947ACCAAD69245367B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60E94835721AFA63B1D2DCE296849A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB05964A2402E48E2B26E0B3BF565095 /* Foundation.framework in Frameworks */,
+				3C84EAB91AA195D34A4248A1383BD73B /* RBSReuseQueue.framework in Frameworks */,
+				38EF3FB6327DFB25C887C7563E3C64B2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2740FD6F8CDEBEB5CE4A677B5024318E /* Products */ = {
+		0BF55DFCF5BD91C90514B8AF1672AD4E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				0DBAD2732EA39A1E387906EF444B5214 /* Pods_RBSOdometer_Example.framework */,
-				D7C85344F82DF69CD988B5290227604E /* Pods_RBSOdometer_Tests.framework */,
-				BE4E3B3F9F35F05DE0A1F62449483817 /* RBSOdometer.framework */,
+				F6DB4212249AA7354010AB3A613C24D9 /* Foundation.framework */,
+				0217D99058421146CCE3B0C2AFE2988E /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5256A123E729D2861EA1FE3B7DF64C18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDA40B7DBCA59E75B606C6FAAA393395 /* Pods_RBSOdometer_Example.framework */,
+				DF8F660A4B9DDC0219D7C36E68441D44 /* Pods_RBSOdometer_Tests.framework */,
+				74E45152FF621C80A24C9D7CC11206A9 /* RBSOdometer.framework */,
+				DCC86AE2DE020BCAC75CDB29C68C4ABE /* RBSReuseQueue.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		5EDC9B3CC3BC70858372BC4FC80AD35A /* RBSReuseQueue */ = {
+			isa = PBXGroup;
+			children = (
+				AF058E445EE72BD178B51AB52B202286 /* RBSReusableDelegate.h */,
+				51BF960A91804E6BD9664A4223955719 /* RBSReuseQueue.h */,
+				B790BDC1B9037103FF0EE097AC3DEF2C /* RBSReuseQueue.m */,
+				F1C8B64397DF972EE818B56E259338E1 /* Support Files */,
+			);
+			name = RBSReuseQueue;
+			path = RBSReuseQueue;
 			sourceTree = "<group>";
 		};
 		6795A3C65EF1F929EE776E8907398502 /* Pods-RBSOdometer_Tests */ = {
@@ -127,8 +193,9 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				E495128A9D175904759FBB433E0A6843 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				2740FD6F8CDEBEB5CE4A677B5024318E /* Products */,
+				ABFF0395AFF6D2EE41092AA2A4923FEE /* Frameworks */,
+				C23637D3C7ECA059A99237C33A277904 /* Pods */,
+				5256A123E729D2861EA1FE3B7DF64C18 /* Products */,
 				DCF429495FC1F8F815DC8D91D921EDCD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -165,20 +232,21 @@
 			path = "Example/Pods/Target Support Files/RBSOdometer";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		ABFF0395AFF6D2EE41092AA2A4923FEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				041B23C97132DA96B8701B8CFA007DFB /* RBSReuseQueue.framework */,
+				0BF55DFCF5BD91C90514B8AF1672AD4E /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		C23637D3C7ECA059A99237C33A277904 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				5EDC9B3CC3BC70858372BC4FC80AD35A /* RBSReuseQueue */,
 			);
-			name = iOS;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		DCF429495FC1F8F815DC8D91D921EDCD /* Targets Support Files */ = {
@@ -209,23 +277,47 @@
 			path = ../..;
 			sourceTree = "<group>";
 		};
+		F1C8B64397DF972EE818B56E259338E1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA0929EADA025728A703149C25EEB18A /* Info.plist */,
+				4C0E8E619337BCFEA5D48AA215BA11BF /* RBSReuseQueue.modulemap */,
+				0E6BEB5ED59573C2A943B00405C4A6CE /* RBSReuseQueue.xcconfig */,
+				923A328B73264EB3306F39C08E2ADD08 /* RBSReuseQueue-dummy.m */,
+				028B9E2FC2D5CECBAE0172218810D70D /* RBSReuseQueue-prefix.pch */,
+				482011CA9345179205C537C581C03C34 /* RBSReuseQueue-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/RBSReuseQueue";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		180E0130DD6766F264D62966C0EF2DED /* Headers */ = {
+		181C908F8F8CD2CC1E4C2A548C284AE7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5188A4D8826D96CA7776C98CB502C2F /* RBSOdometer-umbrella.h in Headers */,
-				7BC221682E51C1C312D3BC49C0C1583D /* RBSOdometerView.h in Headers */,
+				63735284B7F0BD1E889B80EAF7822DBA /* RBSOdometer-umbrella.h in Headers */,
+				D49149793F80B4E7E0C2EC7D35AE930E /* RBSOdometerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97D7B06455E806A18EB9416296A8D82E /* Headers */ = {
+		59E24A08AF919450B6ED49303BC8855D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FF119A37BD9D74DC2E6ACFB45AD8460 /* Pods-RBSOdometer_Example-umbrella.h in Headers */,
+				3A5D2CCAC02F13A28DAFEEA30EF665B0 /* Pods-RBSOdometer_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8BB0D4D2BB1809B5B38ABB8E07E48DCC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B53A8C99968CAE48A5B76F0D9695FC1D /* RBSReusableDelegate.h in Headers */,
+				C1E3ECDC91190D75B3BEDE85AD82C776 /* RBSReuseQueue-umbrella.h in Headers */,
+				93BA1306E5B3BEF8C69F609E6B44584F /* RBSReuseQueue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +332,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		250DC430D833BAA34DE8A9F26767EF84 /* RBSOdometer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0864B7AEA0F771BFDD802C4A5D01D0E1 /* Build configuration list for PBXNativeTarget "RBSOdometer" */;
+			buildPhases = (
+				6D25C12CDF86579698DE1EE44B7FE495 /* Sources */,
+				F60E94835721AFA63B1D2DCE296849A7 /* Frameworks */,
+				181C908F8F8CD2CC1E4C2A548C284AE7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2C4F04362A554AE85985E76EB74A42E /* PBXTargetDependency */,
+			);
+			name = RBSOdometer;
+			productName = RBSOdometer;
+			productReference = 74E45152FF621C80A24C9D7CC11206A9 /* RBSOdometer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		35F2A0A5836A4BE6F2C4E7FF4CBE6BC2 /* Pods-RBSOdometer_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E7D2C8AA1EA6E6EE8B49B1027ADD0BB /* Build configuration list for PBXNativeTarget "Pods-RBSOdometer_Tests" */;
@@ -254,42 +364,43 @@
 			);
 			name = "Pods-RBSOdometer_Tests";
 			productName = "Pods-RBSOdometer_Tests";
-			productReference = D7C85344F82DF69CD988B5290227604E /* Pods_RBSOdometer_Tests.framework */;
+			productReference = DF8F660A4B9DDC0219D7C36E68441D44 /* Pods_RBSOdometer_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7AE2B0798DD21FA35ACE87D09AE9A299 /* Pods-RBSOdometer_Example */ = {
+		92E54163F43F27474020C61C710872FC /* Pods-RBSOdometer_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E0E24461D21FA6B8BB8876A452F3AB1E /* Build configuration list for PBXNativeTarget "Pods-RBSOdometer_Example" */;
+			buildConfigurationList = 5F3034ADFB7A7F5080DC6652E82EC550 /* Build configuration list for PBXNativeTarget "Pods-RBSOdometer_Example" */;
 			buildPhases = (
-				8AD41CC62ED0C986D4BD549259B0705D /* Sources */,
-				15D98A6A45A5939D2436CA7A14BC6A48 /* Frameworks */,
-				97D7B06455E806A18EB9416296A8D82E /* Headers */,
+				F1C2BD1090846606B3452A144FA72FBD /* Sources */,
+				0617383D9F21C52EA6C4A86F80731A39 /* Frameworks */,
+				59E24A08AF919450B6ED49303BC8855D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7D2735D2CAD71A0433BB841967441F14 /* PBXTargetDependency */,
+				CEFB92A40E25C58098FD19C3E0A26A01 /* PBXTargetDependency */,
+				8CB52BE8AE794B56CB9F56855CDF9575 /* PBXTargetDependency */,
 			);
 			name = "Pods-RBSOdometer_Example";
 			productName = "Pods-RBSOdometer_Example";
-			productReference = 0DBAD2732EA39A1E387906EF444B5214 /* Pods_RBSOdometer_Example.framework */;
+			productReference = CDA40B7DBCA59E75B606C6FAAA393395 /* Pods_RBSOdometer_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D60E6AD6040D9D31F2E6A8B7D9B0AF7B /* RBSOdometer */ = {
+		A46A9C671B39A14436BC2F007E33AB9F /* RBSReuseQueue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C999A827C41CCABB82A1DF9FDA15B2F /* Build configuration list for PBXNativeTarget "RBSOdometer" */;
+			buildConfigurationList = 08308E749FDB6F706BF6D756022B5E82 /* Build configuration list for PBXNativeTarget "RBSReuseQueue" */;
 			buildPhases = (
-				5A2DB10F89F8C8715A3BE7DBCF43C387 /* Sources */,
-				53E3874BFD8BD6120D426BA32DAA12B9 /* Frameworks */,
-				180E0130DD6766F264D62966C0EF2DED /* Headers */,
+				FCDAA8B234F4614366C129BD48BE863B /* Sources */,
+				CE9416E311C9F2A2DE02C0519D664CB4 /* Frameworks */,
+				8BB0D4D2BB1809B5B38ABB8E07E48DCC /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RBSOdometer;
-			productName = RBSOdometer;
-			productReference = BE4E3B3F9F35F05DE0A1F62449483817 /* RBSOdometer.framework */;
+			name = RBSReuseQueue;
+			productName = RBSReuseQueue;
+			productReference = DCC86AE2DE020BCAC75CDB29C68C4ABE /* RBSReuseQueue.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -309,32 +420,25 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 2740FD6F8CDEBEB5CE4A677B5024318E /* Products */;
+			productRefGroup = 5256A123E729D2861EA1FE3B7DF64C18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7AE2B0798DD21FA35ACE87D09AE9A299 /* Pods-RBSOdometer_Example */,
+				92E54163F43F27474020C61C710872FC /* Pods-RBSOdometer_Example */,
 				35F2A0A5836A4BE6F2C4E7FF4CBE6BC2 /* Pods-RBSOdometer_Tests */,
-				D60E6AD6040D9D31F2E6A8B7D9B0AF7B /* RBSOdometer */,
+				250DC430D833BAA34DE8A9F26767EF84 /* RBSOdometer */,
+				A46A9C671B39A14436BC2F007E33AB9F /* RBSReuseQueue */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5A2DB10F89F8C8715A3BE7DBCF43C387 /* Sources */ = {
+		6D25C12CDF86579698DE1EE44B7FE495 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA55B47D5BE5D99F4EC116814318B320 /* RBSOdometer-dummy.m in Sources */,
-				ADAB26D00A8B34CA7B2D90860D5F462E /* RBSOdometerView.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8AD41CC62ED0C986D4BD549259B0705D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E30561B63063ECA76D6301237B0AC0A0 /* Pods-RBSOdometer_Example-dummy.m in Sources */,
+				328F146262A0C9264E536629FD475193 /* RBSOdometer-dummy.m in Sources */,
+				A98144519CF275E93C1585FB05CED137 /* RBSOdometerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,21 +450,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F1C2BD1090846606B3452A144FA72FBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12C6537256B973F2F69A04D39B7CBDA7 /* Pods-RBSOdometer_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCDAA8B234F4614366C129BD48BE863B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				698458E192829B3AEA191E7FF841ABBE /* RBSReuseQueue-dummy.m in Sources */,
+				28D5B6D1539718F340E978724C4F1686 /* RBSReuseQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D2735D2CAD71A0433BB841967441F14 /* PBXTargetDependency */ = {
+		8CB52BE8AE794B56CB9F56855CDF9575 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RBSReuseQueue;
+			target = A46A9C671B39A14436BC2F007E33AB9F /* RBSReuseQueue */;
+			targetProxy = FF5CB14C4A31D988D2E4C66F058FF6BB /* PBXContainerItemProxy */;
+		};
+		CEFB92A40E25C58098FD19C3E0A26A01 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RBSOdometer;
-			target = D60E6AD6040D9D31F2E6A8B7D9B0AF7B /* RBSOdometer */;
-			targetProxy = 0A406E286CCFA373B22A6CFE4433220A /* PBXContainerItemProxy */;
+			target = 250DC430D833BAA34DE8A9F26767EF84 /* RBSOdometer */;
+			targetProxy = B9ECD1F714B59AAF20C1E5F26577C8F9 /* PBXContainerItemProxy */;
+		};
+		F2C4F04362A554AE85985E76EB74A42E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RBSReuseQueue;
+			target = A46A9C671B39A14436BC2F007E33AB9F /* RBSReuseQueue */;
+			targetProxy = 66ECBA775255015CF125245508D47A27 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0389C7F5C4A2415AF914C388CD8500FF /* Release */ = {
+		0987A1F6E4D5E5E33697D6D502663D47 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C87E3BF6AA4B7C2C67B88AC881598CCB /* RBSOdometer.xcconfig */;
+			baseConfigurationReference = 0E6BEB5ED59573C2A943B00405C4A6CE /* RBSReuseQueue.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -371,22 +504,21 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RBSOdometer/RBSOdometer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RBSOdometer/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RBSReuseQueue/RBSReuseQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RBSReuseQueue/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RBSOdometer/RBSOdometer.modulemap";
-				PRODUCT_NAME = RBSOdometer;
+				MODULEMAP_FILE = "Target Support Files/RBSReuseQueue/RBSReuseQueue.modulemap";
+				PRODUCT_NAME = RBSReuseQueue;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -448,7 +580,39 @@
 			};
 			name = Debug;
 		};
-		39820D0493B7CAAD13652EC02DFF1CC6 /* Release */ = {
+		4BDEF716A2352900B00A1C02B8C33E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1738EC4C20F78A6111E29670BC86FA80 /* Pods-RBSOdometer_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RBSOdometer_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RBSOdometer_Example/Pods-RBSOdometer_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_RBSOdometer_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5A12DF1325F92A139FF30C8D25948957 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C0800C48934B8184A58C4E87BCAF4B56 /* Pods-RBSOdometer_Example.release.xcconfig */;
 			buildSettings = {
@@ -536,9 +700,9 @@
 			};
 			name = Release;
 		};
-		835DCE6B1C9CBD95FEC360D9B8AA1F9F /* Debug */ = {
+		753F1A5189421C170819502F6F65151C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1738EC4C20F78A6111E29670BC86FA80 /* Pods-RBSOdometer_Example.debug.xcconfig */;
+			baseConfigurationReference = C87E3BF6AA4B7C2C67B88AC881598CCB /* RBSOdometer.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -549,19 +713,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RBSOdometer_Example/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/RBSOdometer/RBSOdometer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RBSOdometer/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RBSOdometer_Example/Pods-RBSOdometer_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_RBSOdometer_Example;
+				MODULEMAP_FILE = "Target Support Files/RBSOdometer/RBSOdometer.modulemap";
+				PRODUCT_NAME = RBSOdometer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -601,6 +762,36 @@
 			};
 			name = Release;
 		};
+		AAA86CD5E7594786C569090D7564A6CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E6BEB5ED59573C2A943B00405C4A6CE /* RBSReuseQueue.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RBSReuseQueue/RBSReuseQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RBSReuseQueue/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RBSReuseQueue/RBSReuseQueue.modulemap";
+				PRODUCT_NAME = RBSReuseQueue;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D82E7E3C2BDC97F9AF726124AEEA3943 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1EBFB70583C394509B51E3AE02D25B1F /* Pods-RBSOdometer_Tests.debug.xcconfig */;
@@ -633,7 +824,7 @@
 			};
 			name = Debug;
 		};
-		EE8379F47964CF914197E20F9DD09311 /* Debug */ = {
+		E2254D5E7268DD833834F780DE2C8605 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C87E3BF6AA4B7C2C67B88AC881598CCB /* RBSOdometer.xcconfig */;
 			buildSettings = {
@@ -657,19 +848,29 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C999A827C41CCABB82A1DF9FDA15B2F /* Build configuration list for PBXNativeTarget "RBSOdometer" */ = {
+		08308E749FDB6F706BF6D756022B5E82 /* Build configuration list for PBXNativeTarget "RBSReuseQueue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE8379F47964CF914197E20F9DD09311 /* Debug */,
-				0389C7F5C4A2415AF914C388CD8500FF /* Release */,
+				0987A1F6E4D5E5E33697D6D502663D47 /* Debug */,
+				AAA86CD5E7594786C569090D7564A6CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0864B7AEA0F771BFDD802C4A5D01D0E1 /* Build configuration list for PBXNativeTarget "RBSOdometer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				753F1A5189421C170819502F6F65151C /* Debug */,
+				E2254D5E7268DD833834F780DE2C8605 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -692,11 +893,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E0E24461D21FA6B8BB8876A452F3AB1E /* Build configuration list for PBXNativeTarget "Pods-RBSOdometer_Example" */ = {
+		5F3034ADFB7A7F5080DC6652E82EC550 /* Build configuration list for PBXNativeTarget "Pods-RBSOdometer_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				835DCE6B1C9CBD95FEC360D9B8AA1F9F /* Debug */,
-				39820D0493B7CAAD13652EC02DFF1CC6 /* Release */,
+				4BDEF716A2352900B00A1C02B8C33E74 /* Debug */,
+				5A12DF1325F92A139FF30C8D25948957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -103,9 +103,11 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RBSOdometer/RBSOdometer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RBSReuseQueue/RBSReuseQueue.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/RBSOdometer/RBSOdometer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RBSReuseQueue/RBSReuseQueue.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

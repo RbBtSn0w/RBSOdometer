@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RBSOdometer'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'RBSOdometer is a ObjC library for smoothly transitioning numbers..'
 
 # This description is used to generate tags and improve search results.
@@ -41,5 +41,5 @@ Pod::Spec.new do |s|
 
   #s.public_header_files = 'Pod/Classes/*.h'
   s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'RBSReuseQueue', '~> 0.1.0'
 end
