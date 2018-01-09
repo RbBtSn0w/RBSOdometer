@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 #                        DESC
 
   s.homepage         = 'https://github.com/RbBtSn0w/RBSOdometer'
-  s.screenshots      = 'https://github.com/RbBtSn0w/RBSOdometer/blob/master/RBSOdometerDemo.gif'
+  #s.screenshots      = 'https://github.com/RbBtSn0w/RBSOdometer/blob/master/RBSOdometerDemo.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'RbBtSn0w' => 'hamiltonsnow@gmail.com' }
   s.source           = { :git => 'https://github.com/RbBtSn0w/RBSOdometer.git', :tag => s.version }
