@@ -108,21 +108,17 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     if ([self allAnimateFinish] == NO) {
         return;
     }
-    if (number <= self.number) {
-        return;
-    }
-    
     NSLog(@"[Odometer] %tu", number);
     _number = number;
     [self prepareAnimations:YES];
-    if ([self isGrowNumberTextLength]) {
+    if ([self isChangeNumberTextLength]) {
         [self invalidateIntrinsicContentSize];
     }
     [self createAnimations];
 }
 
-- (BOOL)isGrowNumberTextLength{
-    if (@(self.number).stringValue.length > @(_lastNumber).stringValue.length) {
+- (BOOL)isChangeNumberTextLength{
+    if (@(self.number).stringValue.length != @(_lastNumber).stringValue.length) {
         return YES;
     }
     return NO;
@@ -153,8 +149,10 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     _value = endingNumberString;
     
     NSInteger fillZeroLength = endingNumberString.length - startNumberString.length;
-    for (NSUInteger i = 0; i < fillZeroLength; i++) {
-        startNumberString = [NSString stringWithFormat:@"0%@",startNumberString];
+    if (fillZeroLength > 0) {
+        for (NSUInteger i = 0; i < fillZeroLength; i++) {
+            startNumberString = [NSString stringWithFormat:@"0%@",startNumberString];
+        }
     }
     
     NSLog(@"[Odometer] startNumberString:%@, endingNumberString:%@", startNumberString, endingNumberString);
