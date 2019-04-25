@@ -1,6 +1,0 @@
-framework module RBSOdometer {
-  umbrella header "RBSOdometer-umbrella.h"
-
-  export *
-  module * { export * }
-}

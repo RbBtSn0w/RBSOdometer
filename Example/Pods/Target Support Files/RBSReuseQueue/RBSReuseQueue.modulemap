@@ -1,6 +1,0 @@
-framework module RBSReuseQueue {
-  umbrella header "RBSReuseQueue-umbrella.h"
-
-  export *
-  module * { export * }
-}
