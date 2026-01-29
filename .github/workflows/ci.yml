@@ -1,0 +1,69 @@
+name: CI
+
+on:
+  push:
+    branches: [ master, develop ]
+  pull_request:
+    branches: [ master, develop ]
+
+jobs:
+  test:
+    name: Test on iOS
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+        bundler-cache: true
+    
+    - name: Install CocoaPods
+      run: |
+        gem install cocoapods
+        pod --version
+    
+    - name: Install Dependencies
+      run: |
+        cd Example
+        pod install --repo-update
+    
+    - name: Build and Test
+      run: |
+        cd Example
+        xcodebuild -workspace RBSOdometer.xcworkspace \
+                   -scheme RBSOdometer-Example \
+                   -sdk iphonesimulator \
+                   -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+                   clean build test \
+                   CODE_SIGN_IDENTITY="" \
+                   CODE_SIGNING_REQUIRED=NO \
+                   | xcpretty
+      continue-on-error: false
+    
+    - name: Upload Test Results
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-results
+        path: Example/build/reports
+        
+  pod-lint:
+    name: Validate Podspec
+    runs-on: macos-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+    
+    - name: Install CocoaPods
+      run: gem install cocoapods
+    
+    - name: Lint Podspec
+      run: pod lib lint --allow-warnings
