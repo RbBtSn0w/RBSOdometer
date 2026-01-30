@@ -21,25 +21,38 @@ jobs:
     - name: Install Tuist
       run: |
         curl -Ls https://install.tuist.io | bash
+        echo "$HOME/.tuist/bin" >> $GITHUB_PATH
+    
+    - name: Verify Tuist Installation
+      run: |
+        export PATH="$HOME/.tuist/bin:$PATH"
         tuist --version
     
     - name: Generate Project
       run: |
+        export PATH="$HOME/.tuist/bin:$PATH"
         tuist install
         tuist generate
     
+    - name: List Available Schemes
+      run: |
+        xcodebuild -list -workspace RBSOdometer.xcworkspace || true
+        echo "--- Available schemes listed above ---"
+    
     - name: Build Framework
       run: |
+        set -o pipefail
         xcodebuild build \
           -scheme RBSOdometer \
           -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
           -configuration Debug \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
-          | xcpretty || exit 1
+          | tee build.log
     
     - name: Run Tests
       run: |
+        set -o pipefail
         xcodebuild test \
           -scheme RBSOdometerTests \
           -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
@@ -47,17 +60,18 @@ jobs:
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
-          | xcpretty || exit 1
+          | tee test.log
     
     - name: Build Example App
       run: |
+        set -o pipefail
         xcodebuild build \
           -scheme RBSOdometerExample \
           -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
           -configuration Debug \
           CODE_SIGN_IDENTITY="" \
           CODE_SIGNING_REQUIRED=NO \
-          | xcpretty || exit 1
+          | tee example.log
     
     - name: Upload Coverage
       if: success()

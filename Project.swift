@@ -67,8 +67,12 @@ let project = Project(
                     ]
                 ]
             ),
-            sources: ["Example/RBSOdometer/**"],
-            resources: ["Example/RBSOdometer/**/*.{storyboard,xib,xcassets}"],
+            sources: ["Example/RBSOdometer/**/*.{h,m}"],
+            resources: [
+                "Example/RBSOdometer/Base.lproj/**",
+                "Example/RBSOdometer/en.lproj/**",
+                "Example/RBSOdometer/Images.xcassets"
+            ],
             dependencies: [
                 .target(name: "RBSOdometer")
             ]
@@ -80,7 +84,7 @@ let project = Project(
             bundleId: "com.rbbtsnow.RBSOdometer.Tests",
             deploymentTarget: .iOS(targetVersion: "11.0", devices: [.iphone, .ipad]),
             infoPlist: .default,
-            sources: ["Example/Tests/**"],
+            sources: ["Example/Tests/**/*.{h,m}"],
             dependencies: [
                 .target(name: "RBSOdometer")
             ]
