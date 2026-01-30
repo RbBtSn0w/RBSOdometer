@@ -19,18 +19,13 @@ jobs:
       run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
     
     - name: Install Tuist
-      run: |
-        curl -Ls https://install.tuist.io | bash
-        echo "$HOME/.tuist/bin" >> $GITHUB_PATH
+      run: brew install tuist
     
     - name: Verify Tuist Installation
-      run: |
-        export PATH="$HOME/.tuist/bin:$PATH"
-        tuist --version
+      run: tuist --version
     
     - name: Generate Project
       run: |
-        export PATH="$HOME/.tuist/bin:$PATH"
         tuist install
         tuist generate
     
