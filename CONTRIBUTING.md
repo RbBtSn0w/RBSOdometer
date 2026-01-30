@@ -53,7 +53,15 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ### Prerequisites
 
 - macOS with Xcode 15.0 or later
-- Tuist installed: `curl -Ls https://install.tuist.io | bash`
+- Tuist installed via Mise (recommended):
+  ```bash
+  # Install Mise
+  curl https://mise.run | sh
+  
+  # Install Tuist (will use version from .tool-versions)
+  mise install
+  ```
+  Or via Homebrew: `brew install tuist`
 
 ### Setting Up the Project
 

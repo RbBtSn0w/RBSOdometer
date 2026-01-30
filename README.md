@@ -31,9 +31,18 @@ RBSOdometer is an Objective-C library for smoothly animating number transitions 
 
 ### Using Tuist (Recommended)
 
-1. Install Tuist:
+1. Install Tuist using Mise (recommended):
 ```bash
-curl -Ls https://install.tuist.io | bash
+# Install Mise
+curl https://mise.run | sh
+
+# Install Tuist
+mise use tuist@4.0.0
+```
+
+Or install via Homebrew (note: may install a newer version):
+```bash
+brew install tuist
 ```
 
 2. Add RBSOdometer to your `Dependencies.swift`:

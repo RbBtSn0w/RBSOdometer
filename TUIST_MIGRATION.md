@@ -15,17 +15,26 @@ Tuist is a modern alternative to CocoaPods that offers:
 
 ## Installation
 
-Install Tuist:
+Install Tuist using Mise (recommended for version management):
 
 ```bash
-curl -Ls https://install.tuist.io | bash
-```
+# Install Mise
+curl https://mise.run | sh
 
-Verify installation:
+# Install Tuist (will automatically use version from .tool-versions)
+mise install
 
-```bash
+# Verify installation
 tuist --version
 ```
+
+Alternatively, install via Homebrew (may install latest version):
+
+```bash
+brew install tuist
+```
+
+**Note**: This project uses Tuist 4.0.0 as specified in `.tool-versions`. Mise ensures the correct version is used.
 
 ## Project Structure
 
