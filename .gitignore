@@ -43,6 +43,19 @@ xcuserdata/
 
 Carthage/Build
 
+# Tuist
+#
+# Generated project files
+*.xcodeproj
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+!*.xcworkspace/xcshareddata
+
+# Tuist dependencies
+Tuist/Dependencies
+Dependencies/
+graph.dot
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the

@@ -7,63 +7,63 @@ on:
     branches: [ master, develop ]
 
 jobs:
-  test:
-    name: Test on iOS
-    runs-on: macos-latest
+  build-and-test:
+    name: Build and Test
+    runs-on: macos-14
     
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v4
     
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.0'
-        bundler-cache: true
+    - name: Select Xcode
+      run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
     
-    - name: Install CocoaPods
+    - name: Install Tuist
       run: |
-        gem install cocoapods
-        pod --version
+        curl -Ls https://install.tuist.io | bash
+        tuist --version
     
-    - name: Install Dependencies
+    - name: Generate Project
       run: |
-        cd Example
-        pod install --repo-update
+        tuist install
+        tuist generate
     
-    - name: Build and Test
+    - name: Build Framework
       run: |
-        cd Example
-        xcodebuild -workspace RBSOdometer.xcworkspace \
-                   -scheme RBSOdometer-Example \
-                   -sdk iphonesimulator \
-                   -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
-                   clean build test \
-                   CODE_SIGN_IDENTITY="" \
-                   CODE_SIGNING_REQUIRED=NO \
-                   | xcpretty
-      continue-on-error: false
+        xcodebuild build \
+          -scheme RBSOdometer \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -configuration Debug \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          | xcpretty || exit 1
     
-    - name: Upload Test Results
-      if: always()
-      uses: actions/upload-artifact@v3
+    - name: Run Tests
+      run: |
+        xcodebuild test \
+          -scheme RBSOdometerTests \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -configuration Debug \
+          -enableCodeCoverage YES \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          | xcpretty || exit 1
+    
+    - name: Build Example App
+      run: |
+        xcodebuild build \
+          -scheme RBSOdometerExample \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -configuration Debug \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          | xcpretty || exit 1
+    
+    - name: Upload Coverage
+      if: success()
+      uses: codecov/codecov-action@v3
       with:
-        name: test-results
-        path: Example/build/reports
-        
-  pod-lint:
-    name: Validate Podspec
-    runs-on: macos-latest
-    
-    steps:
-    - uses: actions/checkout@v3
-    
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.0'
-    
-    - name: Install CocoaPods
-      run: gem install cocoapods
-    
-    - name: Lint Podspec
-      run: pod lib lint --allow-warnings
+        files: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false

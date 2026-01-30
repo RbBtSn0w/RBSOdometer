@@ -6,33 +6,57 @@ on:
       - '*'
 
 jobs:
-  release:
-    name: Publish to CocoaPods
-    runs-on: macos-latest
+  create-release:
+    name: Create GitHub Release
+    runs-on: macos-14
     
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v4
     
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.0'
+    - name: Select Xcode
+      run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
     
-    - name: Install CocoaPods
-      run: gem install cocoapods
-    
-    - name: Publish to CocoaPods
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+    - name: Install Tuist
       run: |
-        pod trunk push RBSOdometer.podspec --allow-warnings
-        
+        curl -Ls https://install.tuist.io | bash
+        tuist --version
+    
+    - name: Generate and Build
+      run: |
+        tuist install
+        tuist generate
+        xcodebuild build \
+          -scheme RBSOdometer \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          -configuration Release \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO
+    
+    - name: Create Release Archive
+      run: |
+        xcodebuild archive \
+          -scheme RBSOdometer \
+          -archivePath ./build/RBSOdometer.xcarchive \
+          -destination 'generic/platform=iOS' \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          SKIP_INSTALL=NO \
+          BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+    
+    - name: Create XCFramework
+      run: |
+        xcodebuild -create-xcframework \
+          -framework ./build/RBSOdometer.xcarchive/Products/Library/Frameworks/RBSOdometer.framework \
+          -output ./build/RBSOdometer.xcframework
+        cd build && zip -r RBSOdometer.xcframework.zip RBSOdometer.xcframework
+    
     - name: Create GitHub Release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v1
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        files: ./build/RBSOdometer.xcframework.zip
+        generate_release_notes: true
         draft: false
         prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
