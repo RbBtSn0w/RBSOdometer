@@ -7,6 +7,7 @@
 //
 
 @import XCTest;
+@import RBSOdometer;
 
 @interface Tests : XCTestCase
 
@@ -17,19 +18,17 @@
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown
 {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testInitialization
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    RBSOdometerView *view = [[RBSOdometerView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    XCTAssertNotNil(view);
 }
 
 @end
-

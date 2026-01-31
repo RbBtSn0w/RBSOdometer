@@ -338,15 +338,15 @@ static NSString *const kAnimationKey = @"RBSOdometerAnimationKey";
     CGSize superSize = [super intrinsicContentSize];
     
     CGFloat height = 0;
-    CGFloat widht = 0;
+    CGFloat width = 0;
     for(NSUInteger i = 0; i < [_value length]; ++i){
         NSString *singString = [_value substringWithRange:NSMakeRange(i, 1)];
         CGSize stringSize = [self sizeWithText:singString];
         height = MAX(height, stringSize.height);
-        widht = widht + stringSize.width;
+        width = width + stringSize.width;
     }
     
-    superSize.width = widht;
+    superSize.width = width;
     superSize.height = height;
     return superSize;
 }
