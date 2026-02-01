@@ -3,16 +3,6 @@ import ProjectDescription
 let project = Project(
     name: "RBSOdometer",
     organizationName: "RbBtSn0w",
-    options: .options(
-        automaticSchemesOptions: .enabled(
-            targetSchemesGrouping: .byNameSuffix,
-            codeCoverageEnabled: true,
-            testingOptions: [.parallelizable, .randomExecutionOrdering]
-        ),
-        disableBundleAccessors: false,
-        disableSynthesizedResourceAccessors: true
-    ),
-    packages: [],
     settings: .settings(
         base: [
             "MARKETING_VERSION": "0.2.0",
@@ -25,12 +15,12 @@ let project = Project(
         ]
     ),
     targets: [
-        Target(
+        .target(
             name: "RBSOdometer",
-            platform: .iOS,
+            destinations: [.iPhone, .iPad],
             product: .framework,
             bundleId: "com.rbbtsnow.RBSOdometer",
-            deploymentTarget: .iOS(targetVersion: "11.0", devices: [.iphone, .ipad]),
+            deploymentTargets: .iOS("11.0"),
             infoPlist: .default,
             sources: ["RBSOdometer/Classes/**"],
             resources: [],
@@ -44,12 +34,12 @@ let project = Project(
                 ]
             )
         ),
-        Target(
+        .target(
             name: "RBSOdometerExample",
-            platform: .iOS,
+            destinations: [.iPhone, .iPad],
             product: .app,
             bundleId: "com.rbbtsnow.RBSOdometer.Example",
-            deploymentTarget: .iOS(targetVersion: "11.0", devices: [.iphone, .ipad]),
+            deploymentTargets: .iOS("11.0"),
             infoPlist: .extendingDefault(
                 with: [
                     "UILaunchStoryboardName": "LaunchScreen",
@@ -77,12 +67,12 @@ let project = Project(
                 .target(name: "RBSOdometer")
             ]
         ),
-        Target(
+        .target(
             name: "RBSOdometerTests",
-            platform: .iOS,
+            destinations: [.iPhone, .iPad],
             product: .unitTests,
             bundleId: "com.rbbtsnow.RBSOdometer.Tests",
-            deploymentTarget: .iOS(targetVersion: "11.0", devices: [.iphone, .ipad]),
+            deploymentTargets: .iOS("11.0"),
             infoPlist: .default,
             sources: ["Example/Tests/**/*.{h,m}"],
             dependencies: [
