@@ -4,9 +4,17 @@ on:
   push:
     branches: [ master, develop ]
   pull_request:
+    types: [opened, synchronize, reopened]
     branches: [ master, develop ]
 
+# 允许 CI 自动运行，且在某些情况下推送回仓库（可选）
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 jobs:
+
   build-and-test:
     name: Build and Test
     runs-on: macos-14
@@ -23,7 +31,12 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -s /Applications/Xcode_15.2.app/Contents/Developer
     
-    - name: Generate Project
+    - name: Validate SPM Mode
+      run: |
+        swift build -Xswiftc "-sdk" -Xswiftc "$(xcrun --sdk iphonesimulator --show-sdk-path)" -Xswiftc "-target" -Xswiftc "x86_64-apple-ios15.0-simulator"
+        swift test -Xswiftc "-sdk" -Xswiftc "$(xcrun --sdk iphonesimulator --show-sdk-path)" -Xswiftc "-target" -Xswiftc "x86_64-apple-ios15.0-simulator"
+
+    - name: Generate Project (Tuist Mode)
       run: |
         tuist install
         tuist generate
@@ -31,9 +44,8 @@ jobs:
     - name: List Available Schemes
       run: |
         xcodebuild -list -workspace RBSOdometer.xcworkspace || true
-        echo "--- Available schemes listed above ---"
     
-    - name: Build Framework
+    - name: Build Framework (Tuist)
       run: |
         set -o pipefail
         xcodebuild build \
@@ -44,7 +56,7 @@ jobs:
           CODE_SIGNING_REQUIRED=NO \
           | tee build.log
     
-    - name: Run Tests
+    - name: Run Tests (Tuist)
       run: |
         set -o pipefail
         xcodebuild test \
@@ -75,3 +87,4 @@ jobs:
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: false
+

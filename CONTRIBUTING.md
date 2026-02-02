@@ -127,9 +127,9 @@ Or use the GitHub Actions workflow locally with [act](https://github.com/nektos/
 ```
 RBSOdometer/
 ├── Project.swift              # Tuist project definition
+├── Package.swift              # SPM dependencies & Swift Package definition
 ├── Tuist/
-│   ├── Config.swift          # Tuist configuration
-│   └── Dependencies.swift    # External dependencies
+│   └── Config.swift           # Tuist configuration
 ├── RBSOdometer/
 │   └── Classes/              # Framework source code
 ├── Example/
@@ -153,7 +153,7 @@ The CI runs automatically on every pull request.
 
 Releases are managed by project maintainers:
 
-1. Update version in `Project.swift` and `RBSOdometer.podspec`
+1. Update version in `Project.swift`
 2. Update `CHANGELOG.md`
 3. Create a new tag: `git tag -a v0.x.x -m "Release v0.x.x"`
 4. Push the tag: `git push origin v0.x.x`
