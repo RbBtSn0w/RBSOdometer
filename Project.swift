@@ -7,7 +7,7 @@ let project = Project(
         base: [
             "MARKETING_VERSION": "0.2.0",
             "CURRENT_PROJECT_VERSION": "1",
-            "IPHONEOS_DEPLOYMENT_TARGET": "11.0"
+            "IPHONEOS_DEPLOYMENT_TARGET": "12.0"
         ],
         configurations: [
             .debug(name: "Debug"),
@@ -16,16 +16,35 @@ let project = Project(
     ),
     targets: [
         .target(
+            name: "RBSReuseQueue",
+            destinations: [.iPhone, .iPad],
+            product: .framework,
+            bundleId: "com.rbbtsnow.RBSReuseQueue",
+            deploymentTargets: .iOS("12.0"),
+            infoPlist: .default,
+            sources: ["Vendor/RBSReuseQueue/**"],
+            headers: .headers(
+                public: "Vendor/RBSReuseQueue/include/RBSReuseQueue/*.h"
+            ),
+            settings: .settings(
+                base: [
+                    "DEFINES_MODULE": "YES",
+                    "SKIP_INSTALL": "YES",
+                    "HEADER_SEARCH_PATHS": ["$(SRCROOT)/Vendor/RBSReuseQueue/include"]
+                ]
+            )
+        ),
+        .target(
             name: "RBSOdometer",
             destinations: [.iPhone, .iPad],
             product: .framework,
             bundleId: "com.rbbtsnow.RBSOdometer",
-            deploymentTargets: .iOS("11.0"),
+            deploymentTargets: .iOS("12.0"),
             infoPlist: .default,
             sources: ["RBSOdometer/Classes/**"],
             resources: [],
             dependencies: [
-                .external(name: "RBSReuseQueue")
+                .target(name: "RBSReuseQueue")
             ],
             settings: .settings(
                 base: [
@@ -39,7 +58,7 @@ let project = Project(
             destinations: [.iPhone, .iPad],
             product: .app,
             bundleId: "com.rbbtsnow.RBSOdometer.Example",
-            deploymentTargets: .iOS("11.0"),
+            deploymentTargets: .iOS("12.0"),
             infoPlist: .extendingDefault(
                 with: [
                     "UILaunchStoryboardName": "LaunchScreen",
@@ -72,7 +91,7 @@ let project = Project(
             destinations: [.iPhone, .iPad],
             product: .unitTests,
             bundleId: "com.rbbtsnow.RBSOdometer.Tests",
-            deploymentTargets: .iOS("11.0"),
+            deploymentTargets: .iOS("12.0"),
             infoPlist: .default,
             sources: ["Example/Tests/**/*.{h,m}"],
             dependencies: [

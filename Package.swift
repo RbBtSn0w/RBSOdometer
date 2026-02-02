@@ -15,8 +15,7 @@ let package = Package(
   name: "RBSOdometer",
   defaultLocalization: "en",
   platforms: [
-
-    .iOS(.v11)
+    .iOS(.v12)
   ],
   products: [
     .library(
@@ -24,10 +23,12 @@ let package = Package(
       targets: ["RBSOdometer"]
     )
   ],
-  dependencies: [
-    .package(url: "https://github.com/RbBtSn0w/RBSReuseQueue.git", from: "0.1.0")
-  ],
   targets: [
+    .target(
+        name: "RBSReuseQueue",
+        path: "Vendor/RBSReuseQueue",
+        publicHeadersPath: "include"
+    ),
     .target(
       name: "RBSOdometer",
       dependencies: ["RBSReuseQueue"],
