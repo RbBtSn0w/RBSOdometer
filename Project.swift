@@ -43,6 +43,9 @@ let project = Project(
             infoPlist: .default,
             sources: ["RBSOdometer/Classes/**"],
             resources: [],
+            headers: .headers(
+                public: "RBSOdometer/Classes/*.h"
+            ),
             dependencies: [
                 .target(name: "RBSReuseQueue")
             ],
