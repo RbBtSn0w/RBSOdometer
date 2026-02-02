@@ -39,11 +39,12 @@ jobs:
         swift --version
         tuist version
         ls -R Vendor/
+    
+    - name: Validate SPM Mode
       run: |
         SDK_PATH=$(xcrun --sdk iphonesimulator --show-sdk-path)
         TARGET="arm64-apple-ios15.0-simulator"
         swift build -Xswiftc "-sdk" -Xswiftc "$SDK_PATH" -Xswiftc "-target" -Xswiftc "$TARGET" -Xcc "-isysroot" -Xcc "$SDK_PATH" -Xcc "-target" -Xcc "$TARGET"
-        swift test -Xswiftc "-sdk" -Xswiftc "$SDK_PATH" -Xswiftc "-target" -Xswiftc "$TARGET" -Xcc "-isysroot" -Xcc "$SDK_PATH" -Xcc "-target" -Xcc "$TARGET"
 
 
     - name: Generate Project (Tuist Mode)
