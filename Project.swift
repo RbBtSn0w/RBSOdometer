@@ -115,6 +115,12 @@ let project = Project(
             shared: true,
             buildAction: .buildAction(targets: ["RBSOdometerTests"]),
             testAction: .targets(["RBSOdometerTests"])
+        ),
+        .scheme(
+            name: "RBSOdometerExample",
+            shared: true,
+            buildAction: .buildAction(targets: ["RBSOdometerExample"]),
+            runAction: .runAction(executable: "RBSOdometerExample")
         )
     ]
 )
