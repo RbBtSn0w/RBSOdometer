@@ -7,7 +7,6 @@ on:
     types: [opened, synchronize, reopened]
     branches: [ master, develop ]
 
-# 允许 CI 自动运行，且在某些情况下推送回仓库（可选）
 permissions:
   contents: read
   checks: write
@@ -57,36 +56,17 @@ jobs:
       - name: Build Framework
         run: |
           set -o pipefail
-          xcodebuild build \
-            -scheme RBSOdometer \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-            -configuration Debug \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            | tee build.log
+          xcodebuild build             -scheme RBSOdometer             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'             -configuration Debug             CODE_SIGN_IDENTITY=""             CODE_SIGNING_REQUIRED=NO             | tee build.log
 
       - name: Run Tests
         run: |
           set -o pipefail
-          xcodebuild test \
-            -scheme RBSOdometerTests \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-            -configuration Debug \
-            -enableCodeCoverage YES \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            | tee test.log
+          xcodebuild test             -scheme RBSOdometerTests             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'             -configuration Debug             -enableCodeCoverage YES             CODE_SIGN_IDENTITY=""             CODE_SIGNING_REQUIRED=NO             | tee test.log
 
       - name: Build Example App
         run: |
           set -o pipefail
-          xcodebuild build \
-            -scheme RBSOdometerExample \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-            -configuration Debug \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            | tee example.log
+          xcodebuild build             -scheme RBSOdometerExample             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'             -configuration Debug             CODE_SIGN_IDENTITY=""             CODE_SIGNING_REQUIRED=NO             | tee example.log
 
       - name: Upload Coverage
         if: success()
@@ -96,5 +76,3 @@ jobs:
           flags: unittests
           name: codecov-umbrella
           fail_ci_if_error: false
-
-
