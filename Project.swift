@@ -5,7 +5,7 @@ let project = Project(
     organizationName: "RbBtSn0w",
     settings: .settings(
         base: [
-            "MARKETING_VERSION": "0.2.0",
+            "MARKETING_VERSION": "1.0.0",
             "CURRENT_PROJECT_VERSION": "1",
             "IPHONEOS_DEPLOYMENT_TARGET": "12.0"
         ],
