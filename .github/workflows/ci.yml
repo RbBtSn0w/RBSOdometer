@@ -7,11 +7,11 @@ on:
     types: [opened, synchronize, reopened]
     branches: [ master, develop ]
 
-# 允许 CI 自动运行，且在某些情况下推送回仓库（可选）
 permissions:
-  contents: read
+  contents: write
   checks: write
   pull-requests: write
+  issues: write
 
 jobs:
   spm-check:
@@ -57,36 +57,17 @@ jobs:
       - name: Build Framework
         run: |
           set -o pipefail
-          xcodebuild build \
-            -scheme RBSOdometer \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-            -configuration Debug \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            | tee build.log
+          xcodebuild build             -scheme RBSOdometer             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'             -configuration Debug             CODE_SIGN_IDENTITY=""             CODE_SIGNING_REQUIRED=NO             | tee build.log
 
       - name: Run Tests
         run: |
           set -o pipefail
-          xcodebuild test \
-            -scheme RBSOdometerTests \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-            -configuration Debug \
-            -enableCodeCoverage YES \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            | tee test.log
+          xcodebuild test             -scheme RBSOdometerTests             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'             -configuration Debug             -enableCodeCoverage YES             CODE_SIGN_IDENTITY=""             CODE_SIGNING_REQUIRED=NO             | tee test.log
 
       - name: Build Example App
         run: |
           set -o pipefail
-          xcodebuild build \
-            -scheme RBSOdometerExample \
-            -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
-            -configuration Debug \
-            CODE_SIGN_IDENTITY="" \
-            CODE_SIGNING_REQUIRED=NO \
-            | tee example.log
+          xcodebuild build             -scheme RBSOdometerExample             -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest'             -configuration Debug             CODE_SIGN_IDENTITY=""             CODE_SIGNING_REQUIRED=NO             | tee example.log
 
       - name: Upload Coverage
         if: success()
@@ -97,4 +78,26 @@ jobs:
           name: codecov-umbrella
           fail_ci_if_error: false
 
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    needs: [spm-check, tuist-check]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
